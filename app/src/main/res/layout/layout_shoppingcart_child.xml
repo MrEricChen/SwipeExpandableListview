@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/item_delete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_ff5252"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="删除"
+                android:textColor="@color/color_ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_cartItem"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="@color/color_ffffff"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_ChildSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <CheckBox
+                android:id="@+id/cbChildSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:clickable="false"
+                android:focusable="false" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlChildCover"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/rl_ChildSelected">
+
+            <ImageView
+                android:id="@+id/ivChildCover"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_hyaline"
+                android:padding="5dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res/com.ysrlin.appshaohe"
+            android:id="@+id/rl_product"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rlChildCover"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ivChildTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:maxLines="2"
+                android:text="德国hipp喜宝7种鼓舞米粉份饭"
+                android:textColor="@color/color_272727"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivChildTitle"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/ivChildPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="2"
+                    android:text="$ 137.00"
+                    android:textColor="@color/color_ff5252"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_childCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:maxLines="1"
+                    android:text="x2"
+                    android:textColor="@color/color_272727"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_stock"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:text="库存仅剩5件"
+            android:textColor="@color/color_ff5252"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</FrameLayout>
